@@ -9,4 +9,3 @@ I would like for my all bookmarks to be displayed on the page
 ||app.rb |<- Bookmarks||
 ||app.rb |->| bookmark.erb|
 |/bookmark |<- app.rb | <- | bookmarks.erb|
-|----------|----|-|-|
