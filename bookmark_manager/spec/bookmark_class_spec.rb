@@ -2,8 +2,9 @@ require 'bookmark_class'
 
 describe Bookmark do
 
-  it "displays a array of hard-coded Bookmark instances" do
-    expect(Bookmark.all).to eq([])
+  it 'should display the urls of the bookmarks' do
+    bookmark = Bookmark.all
+    expect(bookmark).to include "http://www.makersacademy.com"
   end
 
 end
