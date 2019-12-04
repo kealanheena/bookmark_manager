@@ -7,9 +7,9 @@ class Bookmark
   # end
 
 
-  def self.all
+  def self.all(database = 'bookmark_manager')
     @list = []
-    bookmarkdb = PG.connect(dbname: 'bookmark_manager')
+    bookmarkdb = PG.connect(dbname: database)
     bookmarkdb.exec("SELECT * FROM bookmarks") do |result|
       result.each do |row|
         @list << row.values_at('url', 'id')
