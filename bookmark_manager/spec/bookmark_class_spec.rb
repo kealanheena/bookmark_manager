@@ -18,4 +18,12 @@ describe Bookmark do
     end
   end
 
+  describe ".create" do
+    it "should display the bing url when 'https://www.bing.com' is passed" do
+      Bookmark.create(url: 'http://www.google.com')
+      p Bookmark.all
+      expect(Bookmark.all[0]).to include('http://www.google.com')
+    end
+  end
+
 end
