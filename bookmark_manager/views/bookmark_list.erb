@@ -1,6 +1,23 @@
-<h1> Bookmark list </h1>
-<ul>
-<% @bookmark_list.each{ |item| %>
-    <li><a href="<%= item[0] %>" target="_blank"><%= item[0] %></a></li>
-<% } %>
-</ul>
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <title>Bookmarks</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="container">
+        <h1> Bookmark list </h1>
+            <ul>
+            <% @bookmark_list.each{ |item| %>
+                <div class="container">
+                    <li><a href="<%= item[0] %>" target="_blank" class="btn btn-outline-dark"><%= item[0] %></a></li>
+                </div>
+            <% } %>
+            </ul>
+    </div>
+</body>
+</html>
