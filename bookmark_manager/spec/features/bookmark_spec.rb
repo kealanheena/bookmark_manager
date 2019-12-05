@@ -3,7 +3,7 @@ require "pg"
 feature "Bookmark page" do
   scenario " display 'bookmarks' on the page" do
     visit("/bookmarks")
-    expect(page).to have_content("Bookmark list")
+    expect(page).to have_content("Bookmark List")
   end
 
   scenario "A user can see bookmarks" do

@@ -14,7 +14,8 @@ class BookmarkManager < Sinatra::Base
   end
 
   get '/form' do
-    erb(:form)
+    erb :form
+    # "Nerd."
   end
 
 
