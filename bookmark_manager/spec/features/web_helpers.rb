@@ -1,7 +1,5 @@
-def empty_db
-  bookmarkdb = PG.connect(dbname: 'bookmark_manager_test')
-  bookmarkdb.exec("TRUNCATE TABLE bookmarks") do |result|
-  end
+def empty_db(database)
+  database.exec("TRUNCATE TABLE bookmarks")
 end
 
 def add_db

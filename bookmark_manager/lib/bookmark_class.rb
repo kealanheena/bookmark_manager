@@ -2,19 +2,17 @@ require 'pg'
 
 class Bookmark
 
-  # def initialize
-
-  # end
-
-
-  def self.all(database = 'bookmark_manager')
-    @list = []
-    bookmarkdb = PG.connect(dbname: database)
-    bookmarkdb.exec("SELECT * FROM bookmarks") do |result|
-      result.each do |row|
-        @list << row.values_at('url', 'id')
-      end
+  def self.all
+    if ENV['ENVIRONMENT'] == 'test'
+      connection = PG.connect(dbname: 'bookmark_manager_test')
+    else
+      connection = PG.connect(dbname: 'bookmark_manager')
     end
+    
+    @list = []
+    result = connection.exec("SELECT * FROM bookmarks")
+    result.each { |row| @list << row.values_at('url', 'id') }
     @list
   end
+
 end
