@@ -4,7 +4,7 @@ describe Bookmark do
   describe ".all" do
     it 'should displays a list of bookmarks' do
       connection = PG.connect(dbname: 'bookmark_manager_test')
-      empty_db(connection)
+      # empty_db(connection)
 
       connection.exec("INSERT INTO bookmarks (url) VALUES ('http://www.makersacademy.com');")
       connection.exec("INSERT INTO bookmarks (url) VALUES('http://www.destroyallsoftware.com');")
