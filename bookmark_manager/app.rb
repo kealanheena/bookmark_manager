@@ -13,6 +13,10 @@ class BookmarkManager < Sinatra::Base
     erb(:bookmark_list)
   end
 
+  get '/form' do
+    erb(:form)
+  end
+
 
   run! if app_file == $0
 end
