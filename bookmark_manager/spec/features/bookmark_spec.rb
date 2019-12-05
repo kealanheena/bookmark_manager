@@ -20,3 +20,14 @@ feature "Bookmark page" do
     expect(page).to have_content "http://www.google.com"
   end
 end
+
+feature 'Adding bookmark' do
+  scenario 'adds created bookmark to bookmark list' do
+    url1 = 'https://wwww.bing.com'
+    visit '/'
+    # fill_in :name, :with => "Shaf"
+    fill_in :url, :with => url1
+    click_on "submit"
+    expect(page). to have_content(url1)
+  end
+end
