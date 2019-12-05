@@ -1,6 +1,6 @@
 <h1> Bookmark list </h1>
 <ul>
 <% @bookmark_list.each{ |item| %>
-    <li><a href="<%= item[0] %>"><%= item[1] %></a></li>
+    <li><a href="<%= item[0] %>" target="_blank"><%= item[0] %></a></li>
 <% } %>
 </ul>

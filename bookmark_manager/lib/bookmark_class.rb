@@ -11,7 +11,7 @@ class Bookmark
     
     @list = []
     result = connection.exec("SELECT * FROM bookmarks")
-    result.each { |row| @list << row.values_at('url', 'id') }
+    result.each { |row| @list << row.values_at('url') }
     @list
   end
 
