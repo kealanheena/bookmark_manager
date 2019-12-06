@@ -12,9 +12,9 @@ describe Bookmark do
 
       bookmarks = Bookmark.all
 
-      expect(bookmarks[0][0]).to include("http://www.makersacademy.com")
-      expect(bookmarks[1][0]).to include('http://www.destroyallsoftware.com')
-      expect(bookmarks[2][0]).to include('http://www.google.com')
+      expect(bookmarks[0]).to include("http://www.makersacademy.com")
+      expect(bookmarks[1]).to include('http://www.destroyallsoftware.com')
+      expect(bookmarks[2]).to include('http://www.google.com')
     end
   end
 
