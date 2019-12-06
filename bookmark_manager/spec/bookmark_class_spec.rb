@@ -12,17 +12,16 @@ describe Bookmark do
 
       bookmarks = Bookmark.all
 
-      expect(bookmarks[0]).to include("makers")
-      expect(bookmarks[1]).to include('destroyallsoftware')
-      expect(bookmarks[2]).to include('google')
+      expect(bookmarks.first.title).to eq("makers")
+      expect(bookmarks.last.url).to eq('http://www.google.com')
+      expect(bookmarks.last.title).to eq('google')
     end
   end
 
   describe ".create" do
     it "should display the google url when 'https://www.google.com' is passed" do
       Bookmark.create(url: 'http://www.google.com', title: 'google')
-      p Bookmark.all
-      expect(Bookmark.all[0]).to include("google")
+      expect(Bookmark.all.first.title).to eq "google"
     end
   end
 

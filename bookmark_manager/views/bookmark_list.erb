@@ -14,7 +14,7 @@
             <ul>
             <% @bookmark_list.each{ |bookmark| %>
                 <div class="container">
-                    <li><a href="<%= bookmark[0] %>" target="_blank" class="btn btn-outline-dark"><%= bookmark[1] %></a></li>
+                    <li><a href="<%= bookmark.url %>" target="_blank" class="btn btn-outline-dark"><%= bookmark.title %></a></li>
                 </div>
             <% } %>
             </ul>
