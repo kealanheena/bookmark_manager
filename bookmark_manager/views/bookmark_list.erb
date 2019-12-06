@@ -12,9 +12,9 @@
     <div class="container">
         <h1> Bookmark List </h1>
             <ul>
-            <% @bookmark_list.each{ |item| %>
+            <% @bookmark_list.each{ |bookmark| %>
                 <div class="container">
-                    <li><a href="<%= item %>" target="_blank" class="btn btn-outline-dark"><%= item %></a></li>
+                    <li><a href="<%= bookmark[0] %>" target="_blank" class="btn btn-outline-dark"><%= bookmark[1] %></a></li>
                 </div>
             <% } %>
             </ul>
